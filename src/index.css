@@ -295,6 +295,107 @@ h1 {
   }
 }
 
+/* Base styles remain the same for desktop or wider screens */
+/* Add media queries for mobile devices below */
+
+@media (max-width: 768px) {
+  #root {
+    height: auto;
+    padding: 20px;
+  }
+
+  main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: none;
+    padding: 10px;
+    overflow: none;
+  }
+
+  header {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .item-list,
+  .sidebar {
+    width: 100%; /* Ensure both elements take full width */
+    padding: 10px; /* Optional: Add padding for inner spacing */
+  }
+
+  .item-list {
+    width: 100%;
+    height: auto;
+    /* grid-column: 1 / 3; */
+    padding: 10px;
+    overflow-y: visible; /* Allow content to show fully without scrolling */
+    max-height: none;
+  }
+
+  .empty-state {
+    position: static; /* Ensure the empty state is shown naturally */
+    transform: none;
+  }
+
+  .sidebar {
+    /* grid-column: 1 / 3;
+    grid-row: auto; */
+
+    padding: 10px;
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+  }
+
+  h1 {
+    font-size: 60px;
+    top: 10%;
+  }
+
+  footer {
+    flex-direction: column;
+    font-size: 10px;
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .button-group {
+    margin-top: 60px;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  header {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .item-list {
+    padding: 8px;
+  }
+
+  .sidebar {
+    padding: 8px;
+  }
+
+  footer {
+    font-size: 8px;
+  }
+}
+
 footer {
   width: min(972px, 100%);
   display: flex;
